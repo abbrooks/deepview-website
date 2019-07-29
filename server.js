@@ -95,7 +95,7 @@ router.get('/', (_, res) => res.redirect('/index'));
 router.get('/index', (_, res) => { res.render('index.html'); });
 
 //import routes from routes folder
-
+require('./routes/navigation.js')(router, app) //for navigating through the site
 
 
 
