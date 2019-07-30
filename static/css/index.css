@@ -1,0 +1,153 @@
+/** globals **/
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html{
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+a,button{
+  cursor: pointer;
+}
+
+/** HEADER **/
+
+#header{
+  display: block;
+  width: 100%;
+  height: 554px;
+  min-height: 554px;
+}
+
+#header-video{
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 554px;
+  min-height: 554px;
+}
+
+#header-filter{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  height: 554px;
+  min-height: 554px;
+}
+
+#header-content{
+  width: 628px;
+  align-content: center;
+  position: absolute;
+  left: 15%;
+  top: 0px;
+  padding-top: 120px;
+}
+
+#header-h1{
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 53px;
+  color: white;
+}
+
+#header-p{
+  color: rgba(255,255,255,0.7);
+  font-size: 17px;
+  width: 395px;
+  margin-top: 10px;
+  line-height: 27.6px;
+}
+
+#header-btn{
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  width: 197px;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+  height: 50px;
+}
+
+/** NAVBAR **/
+
+#navbar-container{
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  height: 100px;
+  min-height: 100px;
+  top: 0px;
+  left: 0px;
+}
+
+#navbar-logo{
+  background-color: transparent;
+  background-image: url('/assets/index/site-logo.svg');
+  background-size: contain;
+  width: 184px;
+  height: 50px;
+  margin-left: 48px;
+  margin-top: 25px;
+}
+
+#navbar-logo:hover{
+  transform: scale(1.1);
+  transition-duration: .5s;
+}
+
+#navbar-links{
+  width: 467px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  float: right;
+  margin-top: 29px;
+  margin-right: 48px;
+  align-items: center;
+}
+
+#navbar-links a{
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+#navbar-links a:hover{
+  transform: scale(1.05);
+  text-shadow: 0px 0px 50px black;
+  transition-duration: .5s;
+}
+
+#navbar-links button{
+  color: white;
+  background-color: rgb(19, 84, 122);
+  font-size: 14px;
+  font-weight: 600;
+  width: 197px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+  height: 40px;
+}
+
+#navbar-links button:hover{
+  text-shadow: 0px 0px 20px black;
+  transition-duration: .5s;
+}
