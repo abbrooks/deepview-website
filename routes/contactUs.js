@@ -25,5 +25,13 @@ module.exports = router=>{
             text: "Hello, "+req.session.key+". Here is your confirmation code for the event "+theGig.name+"      -----                 "+code+"                 -----               Give this code to the arist at the time of the event in person. They should submit this code on their home page. Also be sure to submit the code the artist gives you on your home page. DO NOT SEND THIS CODE TO ANYONE. You should exchange codes in person at the time of the event. We do this to ensure fair transactions between our customers. Once both codes have been sent we will securly charge you and transfer the artist "+theGig.price+ " for you. If you have any questions at all simply reply to this email. Enjoy the music and thank you for using Banda. —Your team at Banda.", // plain text body
             html: '' // html body
         };
+        transporter.sendMail(mailOptions, (error, info) => {
+              if (error) {
+                 console.log('There was an error sending the email: ' + error);
+                 cb(error);
+              }
+              console.log('Message sent: ' + info);
+                 cb();
+            });
   }
 } // end of exports
