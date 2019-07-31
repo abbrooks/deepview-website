@@ -13,8 +13,6 @@ html{
 }
 
 body{
-  width: 100%;
-  height: 100%;
 }
 
 a{
@@ -103,7 +101,7 @@ a,button{
   left: 0px;
 }
 
-.scrolled-navbar {
+.scrolled-navbar, .scrolled-navbar-dropdown {
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
@@ -114,6 +112,14 @@ a,button{
 
 .scrolled-navbar #navbar-logo{
   background-image: url('/assets/index/site-logo-black.svg');
+}
+
+.scrolled-navbar #navbar-compass i{
+  color: black;
+}
+
+.scrolled-navbar-dropdown #navbar-dropdown-links a{
+  color: black;
 }
 
 #navbar-logo{
@@ -169,6 +175,42 @@ a,button{
 #navbar-links button:hover{
   text-shadow: 0px 0px 20px black;
   transition-duration: .5s;
+}
+#navbar-compass{
+  display: none;
+  color: white;
+  font-size: 44px;
+}
+#navbar-dropdown{
+  display: none;
+  z-index: 111;
+  position: fixed;
+  top: 100px;
+  height: 200px;
+  width: 100%;
+  background-color: transparent;
+  height: 100px;
+}
+#navbar-dropdown-links{
+  margin-right: 40px;
+}
+#navbar-dropdown-links a{
+  display: block;
+  text-align: right;
+  color: white;
+  font-weight: 400;
+}
+
+@media(max-width: 800px){
+  #navbar-links{
+    display: none;
+  }
+  #navbar-compass{
+    display: inline;
+    float: right;
+    margin-top: 18px;
+    margin-right: 40px;
+  }
 }
 
 /** WAVE SECTION **/
@@ -262,6 +304,27 @@ a,button{
   height: 300px;
 }
 
+@media(max-width:1244px){
+  #wave-section{
+    background-image: url('/assets/index/wave-bg-tablet.svg');
+  }
+}
+
+@media(max-width: 1000px){
+  #wave-section{
+    height: 1050px;
+  }
+  #wave-grid{
+    width: 100%;
+    grid-template-columns: auto;
+  }
+  #wave-content{
+    width: 500px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
 /** PRODUCTS **/
 
 #products-section{
@@ -314,6 +377,16 @@ a,button{
   transition-duration: 1s;
 }
 
+@media(max-width: 1100px){
+  #products-grid{
+    width: 100%;
+    grid-template-columns: auto;
+  }
+  .products-grid-item{
+    margin-bottom: 30px;
+  }
+}
+
 /** ACTION **/
 
 #action-section{
@@ -351,4 +424,32 @@ a,button{
   margin-top: 80px;
   font-size: 14px;
   line-height: 21.7px;
+}
+
+@media(max-width: 1000px){
+  #action-section h2{
+    font-size: 38px;
+  }
+  #action-section p{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+@media(max-width: 650px){
+  #action-section h2{
+    font-size: 28px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+}
+@media(max-width: 400px){
+ #action-section button{
+  margin-top: 30px;
+  font-size: 14px;
+  width: 250px;
+  border-radius: 20px;
+  height: 40px;
+ }
 }
