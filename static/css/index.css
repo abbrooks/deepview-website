@@ -17,6 +17,10 @@ body{
   height: 100%;
 }
 
+a{
+  text-decoration: none;
+}
+
 a,button{
   cursor: pointer;
 }
@@ -188,4 +192,70 @@ a,button{
 
 #wave-simplicity{
   font-weight: 600;
+}
+
+#wave-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 167px;
+}
+
+#wave-content{
+  color: white;
+  width: 280px;
+  margin: 0 auto;
+}
+
+#wave-content h2{
+  font-size: 32px;
+  font-weight: 600;
+}
+
+#wave-content p{
+  margin-top: 15px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+#wave-card{
+  width: 550px;
+  height: 373px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 15px 50px rgba(38,44,52,.56);
+  margin: 0 auto;
+}
+
+#wave-card h3{
+  font-size: 32px;
+  width: 500px;
+  margin-left: 20px;
+  margin-top: 60px;
+}
+
+#wave-card a{
+  display: block;
+  margin-top: 90px;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: black;
+}
+
+#wave-card a:hover{
+  color: rgb(19, 84, 122);
+}
+
+#compounding-img{
+  position: absolute;
+  margin-top:40px;
+  margin-left: 10px;
+  background-image: url('/assets/index/compounding.png');
+  background-size: cover;
+  padding-left: 10px;
+  width: 550px;
+  height: 300px;
 }
