@@ -98,6 +98,19 @@ a,button{
   left: 0px;
 }
 
+.scrolled-navbar {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
+.scrolled-navbar #navbar-links a{
+  color: black;
+}
+
+.scrolled-navbar #navbar-logo{
+  background-image: url('/assets/index/site-logo-black.svg');
+}
+
 #navbar-logo{
   background-color: transparent;
   background-image: url('/assets/index/site-logo.svg');
@@ -150,4 +163,29 @@ a,button{
 #navbar-links button:hover{
   text-shadow: 0px 0px 20px black;
   transition-duration: .5s;
+}
+
+/** WAVE SECTION **/
+#wave-section{
+  margin-top: 60px;
+  background-image: url('/assets/index/wave-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 711px;
+  min-height: 711px;
+  width: 100%;
+}
+
+#wave-slogan{
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  width: 400px;
+  color: #707070;
+  margin: 0 auto;
+}
+
+#wave-simplicity{
+  font-weight: 600;
 }
