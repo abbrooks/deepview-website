@@ -26,7 +26,7 @@ module.exports = {
 	idFromUsername: idFromUsername,
 }
 
-const PORT = 27018,
+const PORT = 27017,
       MONGO_URL = `mongodb://localhost:${PORT}/DeepView`;
 
 const mongodb = require('mongodb');

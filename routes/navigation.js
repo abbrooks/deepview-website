@@ -46,4 +46,9 @@ module.exports = router=>{
   router.get('/eLearning', (req,res)=>{
     res.render('eLearning.html');
   });
+
+  // for naving to admin portal page
+  router.get('/adminPortal', (req, res)=>{
+    res.render('admin.html');
+  })
 } // end of module exports

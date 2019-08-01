@@ -96,6 +96,7 @@ router.get('/index', (_, res) => { res.render('index.html'); });
 
 //import routes from routes folder
 require('./routes/navigation.js')(router, app) //for navigating through the site
+require('./routes/backend_news.js')(router, app) //for creating and getting news pieces
 
 
 
@@ -107,6 +108,7 @@ var server = http.listen(EXPRESS_APP_PORT, ()=>{
   console.log('http+express server running on port: ' + server.address().port);
 });
 
+// for email capabilities
 var email_port = 3010;
 app.listen(email_port, function(req, res){
   console.log('Email is running on port: ',email_port);

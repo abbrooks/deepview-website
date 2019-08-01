@@ -7,8 +7,10 @@ module.exports = router=>{
       res.status(401).end();
     }
     else{
+      console.log('****')
+      console.log(req.body)
       var {username, password, title, body, categories, creator} = req.body;
-      if (!username || !password || !title || !body || categories){
+      if (!username || !password || !title || !body || !categories){
         console.log('Missing fields.');
         res.status(401).end();
       }
@@ -49,7 +51,7 @@ module.exports = router=>{
 
   router.get('/newsArticles', (req,res)=>{
     database.connect(db=>{
-      db.db('news').collection('pieces').find().toArray((err, articles)=>{
+      db.db('news').collection('newsPieces').find().toArray((err, articles)=>{
         if (err){
           console.log('There was an error finding articles. ' + err);
           res.status(500).end();
