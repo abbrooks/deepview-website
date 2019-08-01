@@ -20,7 +20,7 @@
 }
 
 .scrolled-navbar #navbar-logo{
-  background-image: url('/assets/index/site-logo-black.svg');
+  background-image: url('/assets/nav/site-logo-black.png');
 }
 
 .scrolled-navbar #navbar-compass i{
@@ -34,9 +34,9 @@
 #navbar-logo{
   display: inline-block;
   background-color: transparent;
-  background-image: url('/assets/index/site-logo.svg');
+  background-image: url('/assets/nav/site-logo-white.png');
   background-size: contain;
-  width: 184px;
+  width: 182px;
   height: 50px;
   margin-left: 48px;
   margin-top: 25px;
@@ -131,7 +131,7 @@
   }
   #navbar-logo{
     height: 40px;
-    width: 147px;
+    width: 145px;
     margin-left: 20px;
   }
   #navbar-compass{
