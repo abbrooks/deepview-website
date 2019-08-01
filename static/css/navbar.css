@@ -1,0 +1,141 @@
+/** NAVBAR **/
+#navbar-container{
+  position: fixed;
+  z-index: 111;
+  background-color: transparent;
+  width: 100%;
+  height: 100px;
+  min-height: 100px;
+  top: 0px;
+  left: 0px;
+}
+
+.scrolled-navbar, .scrolled-navbar-dropdown {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
+.scrolled-navbar #navbar-links a{
+  color: black;
+}
+
+.scrolled-navbar #navbar-logo{
+  background-image: url('/assets/index/site-logo-black.svg');
+}
+
+.scrolled-navbar #navbar-compass i{
+  color: black;
+}
+
+.scrolled-navbar-dropdown #navbar-dropdown-links a{
+  color: black;
+}
+
+#navbar-logo{
+  display: inline-block;
+  background-color: transparent;
+  background-image: url('/assets/index/site-logo.svg');
+  background-size: contain;
+  width: 184px;
+  height: 50px;
+  margin-left: 48px;
+  margin-top: 25px;
+}
+
+#navbar-logo:hover{
+  transform: scale(1.1);
+  transition-duration: .5s;
+}
+
+#navbar-links{
+  width: 467px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  float: right;
+  margin-top: 29px;
+  margin-right: 48px;
+  align-items: center;
+}
+
+#navbar-links a{
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+#navbar-links a:hover{
+  transform: scale(1.05);
+  text-shadow: 0px 0px 50px black;
+  transition-duration: .5s;
+}
+
+#navbar-links button{
+  color: white;
+  background-color: rgb(19, 84, 122);
+  font-size: 14px;
+  font-weight: 600;
+  width: 197px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+  height: 40px;
+}
+
+#navbar-links button:hover{
+  text-shadow: 0px 0px 20px black;
+  transition-duration: .5s;
+}
+#navbar-compass{
+  display: none;
+  color: white;
+  font-size: 44px;
+}
+#navbar-dropdown{
+  display: none;
+  z-index: 111;
+  position: fixed;
+  top: 100px;
+  height: 200px;
+  width: 100%;
+  background-color: transparent;
+  height: 100px;
+}
+#navbar-dropdown-links{
+  margin-left: 40px;
+}
+#navbar-dropdown-links a{
+  display: block;
+  text-align: left;
+  color: white;
+  font-weight: 400;
+}
+
+@media(max-width: 800px){
+  #navbar-links{
+    display: none;
+  }
+  #navbar-compass{
+    display: inline;
+    float: right;
+    margin-top: 18px;
+    margin-right: 40px;
+  }
+}
+@media(max-width: 425px){
+  #navbar-container{
+    height: 80px;
+    min-height: 80px;
+  }
+  #navbar-dropdown{
+    top: 80px;
+  }
+  #navbar-logo{
+    height: 40px;
+    width: 147px;
+    margin-left: 20px;
+  }
+  #navbar-compass{
+    font-size: 38px;
+    margin-right: 20px;
+  }
+}

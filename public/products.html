@@ -1,9 +1,39 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1,">
+    <link type="text/css" rel="stylesheet" href="/css/products.css">
+    <link type="text/css" rel="stylesheet" href="/css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="/css/global.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <title>DeepView Solutions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/e4f8280e9f.js"></script>
   </head>
   <body>
+    <div id="navbar-container">
+      <a href="/index" id="navbar-logo"></a>
+      <div id="navbar-links">
+        <a href="/products">Products</a>
+        <a href="/corporate">About</a>
+        <a href="/news">News</a>
+        <button id='contatUsButton' onclick='contactUs()'>CONTACT US</button>
+      </div>
+      <div id="navbar-compass">
+        <i class="far fa-compass" onclick='toggleNavDropdown()'></i>
+      </div>
+    </div>
+    <div id="navbar-dropdown" class="closed-dropdown">
+      <div id="navbar-dropdown-links">
+        <a href="/products">Products</a>
+        <a href="#">About</a>
+        <a href="/news">News</a>
+        <a href="#" onclick='contactUs()'>Contact Us</a>
+      </div>
+    </div>
+
+
     <h1>Products</h1>
     <div>
       <a href='/home'>Home</a>
@@ -20,5 +50,6 @@
       </ul>
     </div>
   </body>
-  <script src='./scripts/prodcuts.js'></script>
+  <script type="text/javascript" src="/scripts/products.js"></script>
+  <script type="text/javascript" src="/scripts/navbar.js"></script>
 <html>
