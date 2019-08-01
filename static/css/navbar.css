@@ -12,6 +12,7 @@
 
 .scrolled-navbar, .scrolled-navbar-dropdown {
   background-color: #fff !important;
+  box-shadow: 0px 15px 50px rgba(38,44,52,.56);
   transition: background-color 200ms linear;
 }
 
