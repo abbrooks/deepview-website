@@ -8,7 +8,7 @@
   background-image: linear-gradient(90deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
 }
 
-#header-img{
+#header-video{
   filter: grayscale(80%);
   object-fit: cover;
   position: absolute;
