@@ -69,4 +69,32 @@ module.exports = router=>{
     })
   })
 
+  router.get('/anArticle', (req,res)=>{
+    if (!req.query){
+      console.log('No id sent.')
+      res.status(401).end();
+    }
+    else{
+      var {id} = req.query;
+
+      database.connect(db=>{
+        db.db('news').collection('newsPieces').findOne({'_id':database.objectId(id)}, (err, article)=>{
+          if (err){
+            console.log('There was an error finding articles. ' + err);
+            res.status(500).end();
+            db.close();
+          }
+          else{
+            console.log('Got articles from mongo.')
+            res.status(200).json({'success':true, 'data':article});
+            db.close();
+          }
+        });
+      }, dbErr=>{
+        console.log('THere was an error connecting to mongo: ' + dbErr);
+        res.status(500).end();
+      });
+    }
+  });
+
 }//end of exports
