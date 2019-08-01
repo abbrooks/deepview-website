@@ -97,7 +97,7 @@ router.get('/index', (_, res) => { res.render('index.html'); });
 //import routes from routes folder
 require('./routes/navigation.js')(router, app) //for navigating through the site
 require('./routes/backend_news.js')(router, app) //for creating and getting news pieces
-
+require('./routes/contactUs.js')(router, app) //for sending emails from website to DeepView
 
 
 //uses our router:

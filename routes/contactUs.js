@@ -17,8 +17,8 @@ const DEEP_VIEW_ADDRESS = 'alexanderrossbothe@gmail.com';
         res.status(200).send('Hmmm...it seems you did not fill out all of the fiels. Please try again. Thank you.').end();
       }
       else{
-        var message = firstName + lastName + ' has contacted us from the DeepView website.\nTheir purpose is: ' + purpose + '. Here is what they said.\n\n'+body'\n\nContact Info:\nPhone: ' + phone + '\nEmail: ' + email;
-        var subj = 'From DeepView.com: ' + firstName+' '+lastName+'wants to ' + purpose
+        var message = firstName +' '+ lastName + ' has contacted us from the DeepView website.\n His/her purpose is: ' + purpose + '.\nHere is what he/she said:\n\n'+body+'\n\nContact Info:\nPhone: ' + phone + '\nEmail: ' + email;
+        var subj = 'From DeepView.com: ' + firstName+' '+lastName+' wants to ' + purpose
         sendEmail(message, subj, cb=>{
           if (cb){
             console.log('There was an error sending mail: ' + cb);
