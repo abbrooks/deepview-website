@@ -16,7 +16,7 @@
     <div id="header-container">
       <div id="header">
         <!-- <video poster="/video/header.png" autoplay="autoplay" src="/video/header.mp4" -->
-        <video id="header-video" src="/video/header.mp4" autoplay="autoplay" loop muted >
+        <video id="header-video" src="/video/deepviewsub.mp4" autoplay="autoplay" loop muted >
       </div>
       <div id="header-filter"></div>
       <div id="header-content">
@@ -25,5 +25,18 @@
           <button id="header-btn" onclick='openArticle()'>Create Article</button>
       </div>
     </div>
+    <div id='create_article_modal'>
+      <input id='title' placeholder="Title..."/>
+      <textarea id='body' placeholder="Body..."></textarea>
+      <input id='creator' placeholder="Your Name..."/>
+      <input id='category' placeholder="Enter category..."/>
+      <button id='add_cat' onclick='addCat()'>Add Category</button>
+      <div>
+        <input id='username' placeholder="Admin username..."/>
+        <input id='password' type='password' placeholder="Password..."/>
+        <button onclick='postArticle()'>Submit</button>
+      </div>
+    </div>
   </body>
+  <script type="text/javascript" src="/scripts/admin.js"></script>
 </html>
