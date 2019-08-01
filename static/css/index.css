@@ -64,6 +64,11 @@
   height: 50px;
 }
 
+#header-btn:hover{
+  transform: scale(1.1);
+  transition-duration: .5s;
+}
+
 @media(max-width: 768px){
   #header-content{
     width: 400px;
