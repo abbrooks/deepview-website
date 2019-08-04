@@ -52,7 +52,18 @@ function addComment(){
   }
   else{
     $.post('/comment', {'id':searchObject.id, 'comment':comment}, res=>{
-      alert(res);
+      if (res){
+        if (res=='' || res==' ' || res==null){
+          alert('Hmmmm....something went wrong on our end. Please refresh and try again.')
+        }
+        else{
+          alert(res);
+        }
+      }
+      else{
+        alert('Hmmmm....something went wrong on our end. Please refresh and try again.')
+      }
+
     })
   }
 }

@@ -2,6 +2,13 @@ module.exports = router=>{
 const OUR_ADDRESS = 'banda.confirmation@gmail.com'
 const DEEP_VIEW_ADDRESS = 'alexanderrossbothe@gmail.com';
   router.post('/requestADemo', (req,res)=>{
+    if (!req.body){
+      console.log('There was no body: ' )
+      res.status(401).end();
+    }
+    else{
+      
+    }
 
   })
 
