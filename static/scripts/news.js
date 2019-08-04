@@ -29,7 +29,13 @@ class Article{
     this.authorName.innerHTML = obj.creator;
     this.authorName.className = 'article-author-name';
     this.commentCount = document.createElement('p');
-    this.commentCount.innerHTML = 'Comments';
+    if (obj.hasOwnProperty('comments')){
+      this.commentCount.innerHTML = 'Comments: ' + obj.comments.length;
+    }
+    else{
+      this.commentCount.innerHTML = 'Comments: None Yet'
+    }
+
     this.commentCount.className = 'article-comment-count';
     this.grid.append(this.authorImg);
     this.grid.append(this.authorName);

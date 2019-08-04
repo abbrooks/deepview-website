@@ -109,29 +109,24 @@ module.exports = router=>{
         res.status(401).end();
       }
       else{
-        var query = {$push:{'comments':comment}};
-
-        database.connect(db={
-
-          db.db('news').collection('newsPieces').updateOne({'_id':database.objectId(id)}, query, function(err, res1){
-
+        var query = {$push:{'comments':comment}}
+        database.connect(db=>{
+          db.db('news').collection('newsPieces').updateOne({'_id':database.objectId(id)}, {$push:{'comments':comment}}, (err1,res1)=>{
             if (err1){
-              console.log('THere was an error pushing comment: ' + comment+ ' to aticle with id: ' + id);
+              console.log('there was an error updating article with id: ' + id);
               res.status(500).end();
               db.close();
             }
-
             else{
-              res.status(200).send('We have added yoru comment!')
+              res.status(200).send('We have added your comment.');
               db.close();
             }
-
-          });
-
+          })
         }, dbErr=>{
           console.log('THere was an error connecting to mongo: ' + dbErr);
           res.status(500).end();
         })
+
       }
     }
   })
