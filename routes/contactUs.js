@@ -7,9 +7,25 @@ const DEEP_VIEW_ADDRESS = 'alexanderrossbothe@gmail.com';
       res.status(401).end();
     }
     else{
-      
+      var {product, email, phone, lastName, firstName, body, purpose, media} = req.body;
+      if (!body || !firstName || !lastName || !purpose){
+        console.log('Missing fields in contact us');
+        res.status(200).send('Hmmm...it seems you did not fill out all of the fiels. Please try again. Thank you.').end();
+      }
+      else{
+        var message = firstName +' '+ lastName + ' has contacted us from the DeepView website.\n His/her purpose is: ' + purpose + '.\nThey want a demo of: '+product+' for the media: '+media+'\nHere is what he/she said:\n\n'+body+'\n\nContact Info:\nPhone: ' + phone + '\nEmail: ' + email;
+        var subj = 'Demo request from our website: ' + firstName+' '+lastName+' wants to see ' + product;
+        sendEmail(message, subj, cb=>{
+          if (cb){
+            console.log('There was an error sending mail: ' + cb);
+            res.status(200).send('Hmmm...somethign went wrong on our end. Please refresh this page and try again.')
+          }
+          else{
+            res.status(200).send('We have sent your mail to our customer support team! Thank you.');
+          }
+        })
+      }
     }
-
   })
 
   router.post('/contactUs', (req,res)=>{
