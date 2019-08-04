@@ -44,3 +44,15 @@ $.get('/anArticle', {'id':articleID}, res=>{
     alert('Hmmm...somethign went wrong getting this article. Please refresh this page.')
   }
 })
+
+function addComment(){
+  var comment = document.getElementById('comment_input').value
+  if (comment=='' || comment == " " || comment == null){
+    return
+  }
+  else{
+    $.post('/comment', {'id':searchObject.id, 'comment':comment}, res=>{
+      alert(res);
+    })
+  }
+}
