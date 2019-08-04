@@ -40,6 +40,10 @@ class Article{
     this.readBtn = document.createElement('button');
     this.readBtn.className = 'article-read-btn';
     this.readBtn.innerHTML = 'READ MORE';
+    this.readBtn.addEventListener('click', function(){
+      console.log('THIS: ' + this)
+      window.location='/news_pieces?id='+obj._id;
+    })
 
     this.container.append(this.bg);
     this.container.append(this.categories);
