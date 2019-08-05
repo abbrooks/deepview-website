@@ -17,8 +17,10 @@ class Article{
     var dateStr = obj.date;
     var pieces = dateStr.split(' ');
     var day = pieces[0];
-    var month = 
-    this.date.innerHTML = obj.date;
+    var month = pieces[1];
+    var date = pieces[2];
+    var year = pieces[3];
+    this.date.innerHTML = date+'/'+month+'/'+year;
     this.date.className = 'article-date';
     this.title = document.createElement('h2');
     this.title.innerHTML = obj.title;
