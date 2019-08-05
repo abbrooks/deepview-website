@@ -14,6 +14,10 @@ class Article{
       this.categories.append(newLi);
     }
     this.date = document.createElement('h2');
+    var dateStr = obj.date;
+    var pieces = dateStr.split(' ');
+    var day = pieces[0];
+    var month = 
     this.date.innerHTML = obj.date;
     this.date.className = 'article-date';
     this.title = document.createElement('h2');
@@ -22,7 +26,7 @@ class Article{
     this.grid = document.createElement('div');
     this.grid.className = 'article-author-grid';
     this.authorImg = document.createElement('img');
-    this.authorImg.src = '/assets/icons/Linkedin.png';
+    this.authorImg.src = '/assets/logos/DeepView_logo_diver_black.png';
     this.authorImg.alt = 'author';
     this.authorImg.className = 'article-author-image';
     this.authorName = document.createElement('p');
