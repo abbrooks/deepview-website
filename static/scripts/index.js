@@ -13,3 +13,7 @@ function goChatGuard(){
 function goCorpGuard(){
   window.location = '/retention';
 }
+
+function goLearning(){
+  window.location = '/eLearning';
+}

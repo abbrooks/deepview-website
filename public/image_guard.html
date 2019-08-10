@@ -8,67 +8,76 @@
     <link type="text/css" rel="stylesheet" href="/css/navbar.css">
     <link type="text/css" rel="stylesheet" href="/css/global.css">
     <link type="text/css" rel="stylesheet" href="/css/header.css">
+    <link type="text/css" rel="stylesheet" href="/css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-    <title>DeepView Solutions</title>
+    <title>DeepView ImageGuard™</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/e4f8280e9f.js"></script>
   </head>
   <body>
+    <div id="navbar-container">
+      <a href="/index" id="navbar-logo"></a>
+      <div id="navbar-links">
+        <a href="/products">Products</a>
+        <a href="/corporate">About</a>
+        <a href="/news">News</a>
+        <button id='contatUsButton' onclick='contactUs()'>CONTACT US</button>
+      </div>
+      <div id="navbar-compass">
+        <i class="far fa-compass" onclick='toggleNavDropdown()'></i>
+      </div>
+    </div>
+    <div id="navbar-dropdown" class="closed-dropdown">
+      <div id="navbar-dropdown-links">
+        <a href="/products">Products</a>
+        <a href="#">About</a>
+        <a href="/news">News</a>
+        <a href="#" onclick='contactUs()'>Contact Us</a>
+      </div>
+    </div>
     <div id="header-container">
       <div id="header">
         <!-- <video poster="/video/header.png" autoplay="autoplay" src="/video/header.mp4" -->
-        <video id="header-video" src="/video/header.mp4" autoplay="autoplay" loop muted >
+        <video id="header-video" src="/video/phonecam.mp4" autoplay="autoplay" loop muted >
       </div>
       <div id="header-filter"></div>
       <div id="header-content">
-        <h1 id="header-h1">ImageGuard</h1>
-        <p id="header-p">We offer an easy-to-use product that allows firms to prevent employee data leaks and meet global compliance and regulatory standards.</p>
-        <button id="header-btn" onclick='contactUs()'>REQUEST A DEMO</button>
+          <h1 id="header-h1">Photo & video analysis with ImageGuard™</h1>
+          <p id="header-p">Provides a real-time alert system for data breaches via photos, videos and text posted on employees' social media feeds</p>
+          <button id="header-btn" onclick='contactUs()'>REQUEST A DEMO</button>
       </div>
     </div>
-  <h1></h1>
-    <div>
-      <div id='description'>
-      <div id='callout'>
-        The only solution that allows you to read photos and videos for data leaks
+    <h2 id="ig-subheader">The only solution that allows you to read photos and videos for data leaks</h2>
+    <div id="ig-grid">
+      <div id="ig-description">
+        <h2>Our Solution for Photo & Video Analysis</h2>
+        <p>The world’s first patent-pending machine learning algorithm built to detect security risks when employees use their personal social media channels for work or play.</p>
+        <p>If your organization operates in a high risk regulatory environment, you need to know that employees are not inadvertently or deliberately sharing sensitive information or data. DeepView does this in real time so you can take remedial action fast.</p>
+        <p>A DeepView license includes quarterly board reports (written to regulatory standards); dashboard log-ins; as well as on site consultancy during the implementation phase to identify relevant and unique ‘key words’ and ‘key image identifiers’.</p>
+        <p>DeepView’s patent-pending technology is backed by an experienced innovative team, who understand the challenges regulated firms have with BYOD and social media. We’ve developed a platform that spots threats and potential breaches across all forms of user-gen content, and is simple and easy to use for the end user. Simplicity is at the heart of our solution.<p>
       </div>
-
-      <h2>Photo & Video analysis</h2>
-
-        DeepView provides a real time alert system for data breaches via photos, videos and text posted on employees’ social media feeds. The world’s first patent-pending machine learning algorithm built to detect security risks when employees use their personal social media channels for work or play.
-
-        If your organization operates in a high risk regulatory environment, you need to know that employees are not inadvertently or deliberately sharing sensitive information or data. DeepView does this in real time so you can take remedial action fast.
-
-        A DeepView license includes quarterly board reports (written to regulatory standards); dashboard log-ins; as well as on site consultancy during the implementation phase to identify relevant and unique ‘key words’ and ‘key image identifiers’.
-
-        DeepView’s patent-pending technology is backed by an experienced innovative team, who understand the challenges regulated firms have with BYOD and social media. We’ve developed a platform that spots threats and potential breaches across all forms of user-gen content, and is simple and easy to use for the end user. Simplicity is at the heart of our solution.
-      </div>
+      <div id="ig-pic"></div>
     </div>
-    <div>
-      <ul>
-        <li>Patent-pending technology scans photos, videos and text from employees’ social media posts that may contain confidential data from within your organization</li>
-
-        <li>The technology works by scanning posts geo-located to offices within your organization, monitoring user-gen content that other solutions ignore</li>
-
-        <li>Provides you with real time alerts to posts on the public internet that may pose a risk to brand reputation or regulatory compliance</li>
-
-        <li>Reveals unintended public photos posted of terminals and monitors within the trading environment, which could potentially lead to data leaks</li>
-
-        <li>Able to read text and video from a compliance, security and reputation perspective as a backstop to your current solution</li>
-
-        <li>Predefined risk levels for ‘key words’ and ‘key image/video tags’ e.g. Bloomberg terminal is ‘high risk’. Clients are able to personalize their tags for greater efficiency</li>
-
-        <li>Escalation matrix built in, so ‘key words’ and ‘tags’ in images can be sent to your chosen stakeholders on a timely basis</li>
-
-        <li>DeepView is able to support you with ‘take down’ of posts where required</li>
-
-        <li>Human analyst to filter findings and personalize reporting structure to your needs</li>
-
-        <li>Future development roadmap incorporates ability to capture fake accounts, which is becoming an ever-increasing threat to large organizations</li>
-      </ul>
-      <div id='pricing'>
-        Pricing typically runs at a per head subscription basis.
-      </div>
+    <div id="ig-list">
+      <p><span class="big-span">Patent-pending technology</span><span class="small-span"> scans photos, videos and text from employees’ social media posts that may contain confidential data from within your organization</span></p>
+      <p><span class="big-span">The technology works</span><span class="small-span"> by scanning posts geo-located to offices within your organization, monitoring user-gen content that other solutions ignore</span></p>
+      <p><span class="big-span">Provides you with real time alerts</span><span class="small-span"> to posts on the public internet that may pose a risk to brand reputation or regulatory compliance</span></p>
+      <p><span class="big-span">Reveals unintended public photos</span><span class="small-span"> posted of terminals and monitors within the trading environment, which could potentially lead to data leaks</span></p>
+      <p><span class="big-span">Able to read text and video</span><span class="small-span"> from a compliance, security and reputation perspective as a backstop to your current solution</span></p>
+      <p><span class="big-span">Predefined risk levels</span><span class="small-span"> for ‘key words’ and ‘key image/video tags’ e.g. Bloomberg terminal is ‘high risk’. Clients are able to personalize their tags for greater efficiency</span></p>
+      <p><span class="big-span">Escalation matrix built in,</span><span class="small-span"> so ‘key words’ and ‘tags’ in images can be sent to your chosen stakeholders on a timely basis</span></p>
+      <p><span class="big-span">DeepView is able to support you</span><span class="small-span"> with ‘take down’ of posts where required</span></p>
+      <p><span class="big-span">Human analyst</span><span class="small-span"> to filter findings and personalize reporting structure to your needs</span></p>
+      <p><span class="big-span">Future development roadmap</span><span class="small-span"> incorporates ability to capture fake accounts, which is becoming an ever-increasing threat to large organizations</span></p>
+    </div>
+    <div id='ig-pricing'>
+      *Pricing typically runs at a per head subscription basis.
+    </div>
+    <div id="action-section">
+      <h2>Think DeepView can help you?</h2>
+      <button onclick='contactUs()'>REQUEST A DEMO</button>
+      <p>© Copyright 2019 - DeepView™ DeepView Solutions is a sister company of Social Media Compliance Ltd, a company registered in England and Wales with company number 9158438. Registered office: 44 Great Marlborough St, London, W1F 7JL.<p>
     </div>
   </body>
+  <script type="text/javascript" src="/scripts/navbar.js"></script>
 </html>

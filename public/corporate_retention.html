@@ -4,16 +4,49 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" type = "image/png" href = "/assets/logo.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1,">
-    <link type="text/css" rel="stylesheet" href="/css/products.css">
+    <link type="text/css" rel="stylesheet" href="/css/corporate_retention.css">
     <link type="text/css" rel="stylesheet" href="/css/navbar.css">
     <link type="text/css" rel="stylesheet" href="/css/global.css">
     <link type="text/css" rel="stylesheet" href="/css/header.css">
+    <link type="text/css" rel="stylesheet" href="/css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-    <title>DeepView Solutions</title>
+    <title>DeepView CorpGuard™</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/e4f8280e9f.js"></script>
   </head>
   <body>
+    <div id="navbar-container">
+      <a href="/index" id="navbar-logo"></a>
+      <div id="navbar-links">
+        <a href="/products">Products</a>
+        <a href="/corporate">About</a>
+        <a href="/news">News</a>
+        <button id='contatUsButton' onclick='contactUs()'>CONTACT US</button>
+      </div>
+      <div id="navbar-compass">
+        <i class="far fa-compass" onclick='toggleNavDropdown()'></i>
+      </div>
+    </div>
+    <div id="navbar-dropdown" class="closed-dropdown">
+      <div id="navbar-dropdown-links">
+        <a href="/products">Products</a>
+        <a href="#">About</a>
+        <a href="/news">News</a>
+        <a href="#" onclick='contactUs()'>Contact Us</a>
+      </div>
+    </div>
+    <div id="header-container">
+      <div id="header">
+        <!-- <video poster="/video/header.png" autoplay="autoplay" src="/video/header.mp4" -->
+        <video id="header-video" src="/video/corporate.mp4" autoplay="autoplay" loop muted >
+      </div>
+      <div id="header-filter"></div>
+      <div id="header-content">
+          <h1 id="header-h1">Corporate Retention with CorpGuard™</h1>
+          <p id="header-p">DeepView has the unique capability to record and archive all conversations on corporate social media channels such as LinkedIn, Facebook and Twitter, all in one platform.</p>
+          <button id="header-btn" onclick='contactUs()'>REQUEST A DEMO</button>
+      </div>
+    </div>
   <h1>Corporate Retention</h1>
     <div>
       <div id='description'>
@@ -47,5 +80,11 @@
         Pricing typically runs at a per head subscription basis.
       </div>
     </div>
+    <div id="action-section">
+      <h2>Think DeepView can help you?</h2>
+      <button onclick='contactUs()'>REQUEST A DEMO</button>
+      <p>© Copyright 2019 - DeepView™ DeepView Solutions is a sister company of Social Media Compliance Ltd, a company registered in England and Wales with company number 9158438. Registered office: 44 Great Marlborough St, London, W1F 7JL.<p>
+    </div>
   </body>
+  <script type="text/javascript" src="/scripts/navbar.js"></script>
 </html>

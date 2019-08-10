@@ -8,48 +8,88 @@
     <link type="text/css" rel="stylesheet" href="/css/navbar.css">
     <link type="text/css" rel="stylesheet" href="/css/global.css">
     <link type="text/css" rel="stylesheet" href="/css/header.css">
+    <link type="text/css" rel="stylesheet" href="/css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-    <title>DeepView Solutions</title>
+    <title>DeepView eLearning</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/e4f8280e9f.js"></script>
   </head>
   <body>
-  <h1>Training & eLearning</h1>
-    <div>
-      <div id='description'>
-      <div id='callout'>
-
+    <div id="navbar-container">
+      <a href="/index" id="navbar-logo"></a>
+      <div id="navbar-links">
+        <a href="/products">Products</a>
+        <a href="/corporate">About</a>
+        <a href="/news">News</a>
+        <button id='contatUsButton' onclick='contactUs()'>CONTACT US</button>
       </div>
-
-      <h2>Training & eLearning</h2>
-
-        DeepView is a globally recognized provider of innovative compliance training and eLearning modules that raise awareness of the importance of using social media compliantly in the workplace.
-
-        DeepView’s trainers and facilitators will travel to your organization and deliver impactful training programs in your chosen language. Training for graduates is particularly popular worldwide, with many global banks opting for DeepView’s unique offering year-on-year for their annual intake of new graduate staff and interns.
-
-        All of DeepView’s products can be supported with fun eLearning animations that are proven to raise awareness and instill culture change in a short timeframe. Effective eLearning materials improve engagement with employees and also increase learner outcomes, with employees more likely to remember and adhere to important compliance directives delivered in this format.
-
-        We also provide bespoke stand alone eLearning modules and animations that can be used to notify staff of changes in company policies or other internal news items, seamlessly circulating pivotal information in a unique, simple and fun format. Simplicity is at the heart of our solution.
+      <div id="navbar-compass">
+        <i class="far fa-compass" onclick='toggleNavDropdown()'></i>
       </div>
     </div>
-    <div>
-      <ul>
-        <li>Select either bespoke or off-the-shelf training solutions, and let our dedicated Client Delivery Managers guide you every step of the way</li>
-
-        <li>Training can be delivered in person at your chosen office or external venue – or alternatively in bite-sized elearning modules and animations</li>
-
-        <li>Monitor the progress of your staff with our slick and simple elearning management system</li>
-
-        <li>Build your own key performance indicators and reporting structure, and let us show you how we’re keeping on track</li>
-
-        <li>Staff feedback delivered to you in a timely and easily digestible format</li>
-
-        <li>Prove your commitment to compliance with certificates to confirm staff training attendance or elearning participation</li>
-      </ul>
-    </div>
-      <div id='pricing'>
-        Pricing typically runs at a per head subscription basis.
+    <div id="navbar-dropdown" class="closed-dropdown">
+      <div id="navbar-dropdown-links">
+        <a href="/products">Products</a>
+        <a href="#">About</a>
+        <a href="/news">News</a>
+        <a href="#" onclick='contactUs()'>Contact Us</a>
       </div>
+    </div>
+    <div id="header-container">
+      <div id="header">
+        <!-- <video poster="/video/header.png" autoplay="autoplay" src="/video/header.mp4" -->
+        <video id="header-video" src="/video/laptop.mp4" autoplay="autoplay" loop muted >
+      </div>
+      <div id="header-filter"></div>
+      <div id="header-content">
+          <h1 id="header-h1">Compliance Training & eLearning with DeepView</h1>
+          <p id="header-p">DeepView is a globally recognized provider of innovative compliance training and eLearning modules that raise awareness of the importance of using social media compliantly in the workplace.</p>
+          <button id="header-btn" onclick='contactUs()'>REQUEST A DEMO</button>
+      </div>
+    </div>
+
+    <h1>Training & eLearning</h1>
+      <div>
+        <div id='description'>
+        <div id='callout'>
+
+        </div>
+
+        <h2>Training & eLearning</h2>
+
+          DeepView is a globally recognized provider of innovative compliance training and eLearning modules that raise awareness of the importance of using social media compliantly in the workplace.
+
+          DeepView’s trainers and facilitators will travel to your organization and deliver impactful training programs in your chosen language. Training for graduates is particularly popular worldwide, with many global banks opting for DeepView’s unique offering year-on-year for their annual intake of new graduate staff and interns.
+
+          All of DeepView’s products can be supported with fun eLearning animations that are proven to raise awareness and instill culture change in a short timeframe. Effective eLearning materials improve engagement with employees and also increase learner outcomes, with employees more likely to remember and adhere to important compliance directives delivered in this format.
+
+          We also provide bespoke stand alone eLearning modules and animations that can be used to notify staff of changes in company policies or other internal news items, seamlessly circulating pivotal information in a unique, simple and fun format. Simplicity is at the heart of our solution.
+        </div>
+      </div>
+      <div>
+        <ul>
+          <li>Select either bespoke or off-the-shelf training solutions, and let our dedicated Client Delivery Managers guide you every step of the way</li>
+
+          <li>Training can be delivered in person at your chosen office or external venue – or alternatively in bite-sized elearning modules and animations</li>
+
+          <li>Monitor the progress of your staff with our slick and simple elearning management system</li>
+
+          <li>Build your own key performance indicators and reporting structure, and let us show you how we’re keeping on track</li>
+
+          <li>Staff feedback delivered to you in a timely and easily digestible format</li>
+
+          <li>Prove your commitment to compliance with certificates to confirm staff training attendance or elearning participation</li>
+        </ul>
+      </div>
+        <div id='pricing'>
+          Pricing typically runs at a per head subscription basis.
+        </div>
+      </div>
+    <div id="action-section">
+      <h2>Think DeepView can help you?</h2>
+      <button onclick='contactUs()'>REQUEST A DEMO</button>
+      <p>© Copyright 2019 - DeepView™ DeepView Solutions is a sister company of Social Media Compliance Ltd, a company registered in England and Wales with company number 9158438. Registered office: 44 Great Marlborough St, London, W1F 7JL.<p>
     </div>
   </body>
+  <script type="text/javascript" src="/scripts/navbar.js"></script>
 </html>
