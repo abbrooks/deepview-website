@@ -15,7 +15,7 @@ function reqDemo(){
     return
   }
   if(!howMany || howMany==' ' || howMany==''){
-    alert('Sorry, you must provide your first name.')
+    alert('Sorry, you must tell us how many people you are looking to onboard.')
     return
   }
   if(!lName || lName==' ' || lName==''){
@@ -35,7 +35,7 @@ function reqDemo(){
     return
   }
   //product, email, phone, lastName, firstName, body, purpose, media
-  $.post('/requestADemo', {'email':email, 'phone':phone, 'product':which, 'purpose':purp, 'lastName':lName, 'firstName':fName, 'media':media, 'body':body}, res=>{
+  $.post('/requestADemo', {'email':email, 'phone':phone, 'product':which, 'purpose':purp, 'lastName':lName, 'firstName':fName, 'media':media, 'body':body, 'num':howMany}, res=>{
     alert(res)
   });
 }
