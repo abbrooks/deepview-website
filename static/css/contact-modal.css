@@ -1,0 +1,125 @@
+#modal-wrapper-contact{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(0,0,0,0.4);
+  overflow: scroll;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.animate-modal-content{
+  animation: zoom 0.8s;
+}
+
+#modal-content-contact{
+  background-color: white;
+  border-radius: 40px;
+  margin: 30px auto 0px auto;
+  width: 500px;
+  height: 600px;
+  padding: 40px;
+  color: black;
+}
+
+#modal-content-contact h2{
+  font-size: 40px;
+  display: inline;
+}
+
+#modal-content-contact i{
+  cursor: pointer;
+  float: right;
+  font-size: 40px;
+  padding-top: 8px;
+}
+
+#modal-content-contact p{
+  font-size: 22px;
+}
+
+#modal-content-contact input, #modal-content-contact select{
+  background-color: rgb(240,240,240);
+  border: none;
+  height: 40px;
+  width: 400px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+}
+#modal-content-contact select{
+  width: 480px;
+}
+
+
+#modal-content-contact textarea{
+  background-color: rgb(240,240,240);
+  border: none;
+  height: 140px;
+  width: 440px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#contact-submit-btn{
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  width: 257px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+  height: 50px;
+}
+
+@media(max-width: 650px){
+  #modal-content-contact{
+    width: 400px;
+  }
+  #modal-content-contact input{
+    width: 318px;
+  }
+  #modal-content-contact select{
+    width: 400px;
+  }
+  #modal-content-contact textarea{
+    width: 360px;
+  }
+}
+
+@media(max-width: 500px){
+  #modal-content-contact{
+    width: 280px;
+    padding: 30px 10px 30px 10px;
+
+  }
+  #modal-content-contact h2{
+    font-size: 30px;
+  }
+  #modal-content-contact i{
+    font-size: 30px;
+  }
+  #modal-content-contact input, #modal-content-contact select{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #modal-content-contact input{
+    width: 260px;
+  }
+  #modal-content-contact select{
+    width: 280px;
+  }
+  #modal-content-contact textarea{
+    width: 260px;
+    padding: 10px;
+  }
+}

@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="/css/navbar.css">
     <link type="text/css" rel="stylesheet" href="/css/global.css">
     <link type="text/css" rel="stylesheet" href="/css/header.css">
+    <link type="text/css" rel="stylesheet" href="/css/contact-modal.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <title>DeepView Solutions</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,7 +21,7 @@
         <a href="/products">Products</a>
         <a href="/corporate">About</a>
         <a href="/news">News</a>
-        <button id='contatUsButton' onclick='contactUs()'>CONTACT US</button>
+        <button id='contatUsButton' onclick='prepareContactModal()'>CONTACT US</button>
       </div>
       <div id="navbar-compass">
         <i class="far fa-compass" onclick='toggleNavDropdown()'></i>
@@ -31,18 +32,63 @@
         <a href="/products">Products</a>
         <a href="#">About</a>
         <a href="/news">News</a>
-        <a href="#" onclick='contactUs()'>Contact Us</a>
+        <a href="#" onclick='prepareContactModal()'>Contact Us</a>
+      </div>
+    </div>
+    <div id="modal-wrapper-contact">
+      <div id="modal-content-contact" class="animate-modal-content">
+        <h2>Contact Form</h2>
+        <i class="far fa-times-circle" onclick="clearContactForm()"></i>
+        <p>name</p>
+        <input id="contact-name" type="text" />
+        <p>email</p>
+        <input id="contact-email" type="email" />
+        <p>phone</p>
+        <input id="contact-phone" type="phone" />
+        <p>purpose</p>
+        <select id="contact-purpose">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+        <p>message</p>
+        <textarea id="contact-textarea"></textarea>
+        <button id="contact-submit-btn" onclick='submitContactForm()'>SUBMIT</button>
       </div>
     </div>
     <div id="header-container">
       <div id="header">
-        <video id="header-video" src="/video/binary.mp4" autoplay="autoplay" loop muted >
+        <!-- <video poster="/video/header.png" autoplay="autoplay" src="/video/header.mp4" -->
+        <video id="header-video" src="/video/header.mp4" autoplay="autoplay" loop muted >
       </div>
       <div id="header-filter"></div>
       <div id="header-content">
-          <h1 id="header-h1">Latest News</h1>
-          <p id="header-p">Check out these articles for the latest updates on our product and the regulatory space.</p>
+          <h1 id="header-h1">A privacy-focused platform to monitor & archive business communications</h1>
+          <p id="header-p">We offer an easy-to-use product that allows firms to prevent employee data leaks and meet global compliance and regulatory standards.</p>
           <button id="header-btn" onclick='contactUs()'>REQUEST A DEMO</button>
+      </div>
+    </div>
+    <div id="modal-wrapper-contact">
+      <div id="modal-content-contact" class="animate-modal-content">
+        <h2>Contact Form</h2>
+        <i class="far fa-times-circle" onclick="clearContactForm()"></i>
+        <p>name</p>
+        <input id="contact-name" type="text" />
+        <p>email</p>
+        <input id="contact-email" type="email" />
+        <p>phone</p>
+        <input id="contact-phone" type="phone" />
+        <p>purpose</p>
+        <select id="contact-purpose">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+        <p>message</p>
+        <textarea id="contact-textarea"></textarea>
+        <button id="contact-submit-btn" onclick='submitContactForm()'>SUBMIT</button>
       </div>
     </div>
     <div id="news-container">
@@ -69,4 +115,5 @@
   </body>
   <script type="text/javascript" src="/scripts/news.js"></script>
   <script type="text/javascript" src="/scripts/navbar.js"></script>
+  <script type="text/javascript" src="/scripts/contactModal.js"></script>
 <html>
