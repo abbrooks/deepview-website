@@ -35,7 +35,7 @@ function reqDemo(){
     return
   }
   //product, email, phone, lastName, firstName, body, purpose, media
-  $.post('/requestADemo', {'email':email, 'phone':phone, 'product':which, 'purpose':purp, 'lastName':lName, 'firstName':fName, 'media':media, 'body':body, 'num':howMany}, res=>{
+  $.post('/requestADemo', {'email':email, 'phone':phone, 'product':which, 'purpose':purp, 'lastName':lName, 'firstName':fName, 'num':howMany}, res=>{
     alert(res)
   });
 }
