@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1,">
     <link type="text/css" rel="stylesheet" href="/css/index.css">
     <link type="text/css" rel="stylesheet" href="/css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="/css/header.css">
     <link type="text/css" rel="stylesheet" href="/css/global.css">
+    <link type="text/css" rel="stylesheet" href="/css/footer.css">
     <link type="text/css" rel="stylesheet" href="/css/contact-modal.css">
+    <link type="text/css" rel="stylesheet" href="/css/admin.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <title>DeepView Admin Portal</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -68,19 +71,30 @@
           <button id="header-btn" onclick='openArticle()'>Create Article</button>
       </div>
     </div>
-    <div id='create_article_modal'>
-      <input id='title' placeholder="Title..."/>
+    <div id='create_article_section'>
+      <p>Title</p>
+      <input id='title' type="text" placeholder="Title..." maxlength="120"/>
+      <p>Body</p>
       <textarea id='body' placeholder="Body..."></textarea>
+      <p>Author</p>
       <input id='creator' placeholder="Your Name..."/>
+      <p>Category</p>
       <input id='category' placeholder="Enter category..."/>
-      <button id='add_cat' onclick='addCat()'>Add Category</button>
-      <div>
+      <button id='add_cat' onclick='addCat()'>ADD CATEGORY</button>
+      <div id="admin-creds">
+        <p>Username</p>
         <input id='username' placeholder="Admin username..."/>
+        <p>Password</p>
         <input id='password' type='password' placeholder="Password..."/>
-        <button onclick='postArticle()'>Submit</button>
+        <button id="article-submit-btn" onclick='postArticle()'>SUBMIT</button>
       </div>
+    </div>
+    <div id="action-section">
+      <h2>Simplicity is at the heart of our solution</h2>
+      <p>© Copyright 2019 - DeepView™ DeepView Solutions is a sister company of Social Media Compliance Ltd, a company registered in England and Wales with company number 9158438. Registered office: 44 Great Marlborough St, London, W1F 7JL.<p>
     </div>
   </body>
   <script type="text/javascript" src="/scripts/admin.js"></script>
   <script type="text/javascript" src="/scripts/contactModal.js"></script>
+  <script type="text/javascript" src="/scripts/navbar.js"></script>
 </html>

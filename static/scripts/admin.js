@@ -1,5 +1,4 @@
-console.log('Loaded admin script')
-document.getElementById("create_article_modal").hidden=true;
+console.log('Loaded admin script');
 cats=[]
 function addCat(){
   console.log('in add cat')
@@ -9,8 +8,8 @@ function addCat(){
     return
   }
   cats.push(cat);
-  document.getElementById('category').value=null
-  document.getElementById('category').innerHTML=''
+  document.getElementById('category').value=null;
+  document.getElementById('category').innerHTML='';
   return
 }
 
@@ -58,5 +57,4 @@ function postArticle(){
 
 function openArticle(){
   document.getElementById("create_article_modal").hidden=false;
-
 }

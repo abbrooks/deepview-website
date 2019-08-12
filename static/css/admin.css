@@ -1,0 +1,56 @@
+#create_article_section{
+  display: block;
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 80px;
+  color: black;
+}
+#create_article_section input{
+  display: block;
+  background-color: rgb(240,240,240);
+  border: none;
+  height: 40px;
+  width: 400px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#create_article_section textarea{
+  background-color: rgb(240,240,240);
+  border: none;
+  height: 140px;
+  width: 400px;
+  padding: 20px 40px 10px 40px;
+  border-radius: 10px;
+  resize: none;
+}
+
+#add_cat{
+  display: block;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  width: 140px;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+  height: 30px;
+}
+
+#admin-creds{
+  margin-top: 40px;
+}
+
+#article-submit-btn{
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  width: 257px;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+  height: 50px;
+}

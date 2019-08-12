@@ -35,7 +35,6 @@ $.get('/anArticle', {'id':articleID}, res=>{
   if (res){
     if (res.success){
       console.log('We must dipslay this article: ' + JSON.stringify(res.data));
-      buildPage(res.data);
       //display res.data
       var pieces = res.data.body.split('\n');
       console.log('pieces')
@@ -56,6 +55,7 @@ $.get('/anArticle', {'id':articleID}, res=>{
         bodyText+=piece;
       }
       console.log('text: ' + bodyText)
+      buildPage(res.data, bodyText);
     }
     else{
       alert('Hmmm...somethign went wrong getting this article. Please refresh this page.')
@@ -89,14 +89,14 @@ function addComment(){
   }
 }
 
-function buildPage(article){
+function buildPage(article, bodyText){
   var header = document.getElementById('header-h1');
-  // header.innerHTML = article.title;
+  header.innerHTML = article.title;
   header.classList.toggle('header-enabled');
   header.classList.toggle('header-disabled');
   var body = document.getElementById('body-container');
   // BOTHE see below.
-  // body.innerHTML = article.body;
+  body.innerHTML = bodyText;
   body.classList.toggle('body-enabled');
   body.classList.toggle('body-disabled');
   var grid = document.getElementById('header-grid');
@@ -104,7 +104,7 @@ function buildPage(article){
   // BOTHE see below
   // authorImage.src = article.authorPic;
   var author = document.getElementById('header-author');
-  author.innerHTMl = article.creator;
+  author.innerHTML = article.creator;
   var comment = document.getElementById('header-comment');
   if (article.hasOwnProperty('comments')){
     comment.innerHTML = article.comments.length + ' Comments' ;

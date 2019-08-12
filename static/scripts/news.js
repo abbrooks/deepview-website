@@ -47,7 +47,12 @@ class Article{
     this.grid.append(this.authorName);
     this.grid.append(this.commentCount);
     this.preview = document.createElement('p');
-    this.preview.innerHTML = obj.body;
+    if(obj.body.length > 213){
+      var split = obj.body.substr(0,213) + "...";
+      this.preview.innerHTML = split;
+    }else{
+      this.preview.innerHTML = obj.body;
+    }
     this.preview.className = 'article-preview';
     this.readBtn = document.createElement('button');
     this.readBtn.className = 'article-read-btn';
