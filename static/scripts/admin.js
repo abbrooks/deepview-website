@@ -56,5 +56,5 @@ function postArticle(){
 }
 
 function openArticle(){
-  document.getElementById("create_article_section").style.display='block';
+  window.location.href="#create_article_section";
 }

@@ -1,8 +1,8 @@
 #create_article_section{
-  display: none;
+  display: block;
   width: 480px;
   margin: 0 auto;
-  margin-top: 80px;
+  padding-top: 180px;
   color: black;
 }
 #create_article_section input{
