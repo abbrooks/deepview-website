@@ -106,11 +106,25 @@ function buildPage(article, bodyText){
   var author = document.getElementById('header-author');
   author.innerHTML = article.creator;
   var comment = document.getElementById('header-comment');
+  var botComment = document.getElementById('article-comments-count');
   if (article.hasOwnProperty('comments')){
-    comment.innerHTML = article.comments.length + ' Comments' ;
+    if(article.comments.length == 1){
+      comment.innerHTML = '1 Comment';
+      botComment.innerHTML = '1 Comment';
+    }else{
+      comment.innerHTML = article.comments.length + ' Comments' ;
+      botComment.innerHTML = article.comments.length + ' Comments' ;
+    }
+    var comDiv = document.getElementById('article-comments');
+    for(var x in article.comments){
+      var newP = document.createElement('p');
+      newP.innerHTML = article.comments[x];
+      comDiv.append(newP);
+    }
   }
   else{
     comment.innerHTML = '0 Comments';
+    botComment.innerHTML = '0 Comments';
   }
   grid.classList.toggle('header-enabled');
   grid.classList.toggle('header-disabled');

@@ -38,7 +38,11 @@ class Article{
     this.authorName.className = 'article-author-name';
     this.commentCount = document.createElement('p');
     if (obj.hasOwnProperty('comments')){
-      this.commentCount.innerHTML = obj.comments.length + ' Comments' ;
+      if(obj.comments.length == 1){
+        this.commentCount.innerHTML = '1 Comment';
+      }else{
+        this.commentCount.innerHTML = obj.comments.length + ' Comments' ;
+      }
     }
     else{
       this.commentCount.innerHTML = '0 Comments';
