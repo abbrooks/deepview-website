@@ -36,6 +36,10 @@ $.get('/anArticle', {'id':articleID}, res=>{
     if (res.success){
       console.log('We must dipslay this article: ' + JSON.stringify(res.data));
       //display res.data
+
+      // what follows is a parser to take text and make it html
+
+      //body
       var pieces = res.data.body.split('\n');
       console.log('pieces')
       console.log('pieces: ' + JSON.stringify(pieces));
@@ -55,6 +59,16 @@ $.get('/anArticle', {'id':articleID}, res=>{
         bodyText+=piece;
       }
       console.log('text: ' + bodyText)
+
+      //comments
+      var allComments = []
+      for (var c in res.data.comments){
+        var comment = res.data.comments[c]
+        console.log('Comment is: ' + comment)
+        allComments.push('<li>'+comment+'</li>')
+      }
+      console.log('All comments: ' + JSON.stringify(allComments));
+      //ab make this accept an array of html comments as well (allComments)
       buildPage(res.data, bodyText);
     }
     else{
