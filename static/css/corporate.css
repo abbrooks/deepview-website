@@ -1,0 +1,81 @@
+#body-container{
+  padding: 80px 10% 80px 10%;
+  color: black;
+}
+
+#body-container h2{
+  text-decoration: underline;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+#body-container h3{
+  font-size: 23px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#body-container p{
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+#job_div h3{
+  font-size: 23px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#job_div p{
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+#job_div em{
+  display: block;
+  font-size: 28px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+#job_div ul{
+  margin-left: 40px;
+  width: 700px;
+}
+
+#job_div ul li{
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+#job_div ul li ol{
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+#job_div ul li ol li{
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 950px){
+  #job_div ul{
+    width: 500px;
+  }
+}
+@media(max-width: 650px){
+  #job_div ul{
+    margin-left: 40px;
+    width: 300px;
+  }
+}
+
+@media(max-width: 400px){
+  #job_div ul{
+    margin-left: 10px;
+    width: 280px;
+  }
+}
