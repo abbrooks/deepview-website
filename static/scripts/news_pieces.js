@@ -35,6 +35,25 @@ $.get('/anArticle', {'id':articleID}, res=>{
     if (res.success){
       console.log('We must dipslay this article: ' + JSON.stringify(res.data))
       //display res.data
+      var pieces = res.data.body.split('\n');
+      console.log('pieces')
+      console.log('pieces: ' + JSON.stringify(pieces));
+      var bodyText = ''
+      for (p in pieces){
+        var piece = pieces[p];
+        if (piece==' ' || piece=='' || piece==null){
+          continue
+        }
+        if (piece.includes('http') || piece.includes('https') || piece.includes('.com')){
+          piece = '<a src='+piece+'>'+piece+'</a>'
+        }
+        else{
+          piece = '<p>'+piece+'</p>';
+        }
+
+        bodyText+=piece;
+      }
+      console.log('text: ' + bodyText)
     }
     else{
       alert('Hmmm...somethign went wrong getting this article. Please refresh this page.')
