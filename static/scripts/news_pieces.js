@@ -1,3 +1,4 @@
+
 function parseURL(url){
   var parser = document.createElement('a'),
        searchObject = {},
@@ -33,7 +34,8 @@ var articleID = searchObject.id
 $.get('/anArticle', {'id':articleID}, res=>{
   if (res){
     if (res.success){
-      console.log('We must dipslay this article: ' + JSON.stringify(res.data))
+      console.log('We must dipslay this article: ' + JSON.stringify(res.data));
+      buildPage(res.data);
       //display res.data
     }
     else{
@@ -66,4 +68,32 @@ function addComment(){
 
     })
   }
+}
+
+function buildPage(article){
+  var header = document.getElementById('header-h1');
+  // header.innerHTML = article.title;
+  header.classList.toggle('header-enabled');
+  header.classList.toggle('header-disabled');
+  var body = document.getElementById('body-container');
+  // BOTHE see below.
+  // body.innerHTML = article.body;
+  body.classList.toggle('body-enabled');
+  body.classList.toggle('body-disabled');
+  var grid = document.getElementById('header-grid');
+  var authorImage = document.getElementById('header-author-image');
+  // BOTHE see below
+  // authorImage.src = article.authorPic;
+  var author = document.getElementById('header-author');
+  author.innerHTMl = article.creator;
+  var comment = document.getElementById('header-comment');
+  if (article.hasOwnProperty('comments')){
+    comment.innerHTML = article.comments.length + ' Comments' ;
+  }
+  else{
+    comment.innerHTML = '0 Comments';
+  }
+  grid.classList.toggle('header-enabled');
+  grid.classList.toggle('header-disabled');
+
 }
