@@ -1,3 +1,7 @@
+function contactUs(){
+  window.location='/contact';
+}
+
 function clearContactForm(){
   var name = document.getElementById('contact-name');
   var email = document.getElementById('contact-email');

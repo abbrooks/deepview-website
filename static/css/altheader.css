@@ -1,0 +1,42 @@
+#header-grid{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 60px 60px 60px 150px;
+}
+
+#header-grid a{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-size: contain;
+  border: 1px solid white;
+}
+
+#social-fb{
+  background-image: url('/assets/icons/Facebook.png');
+}
+
+#social-twitter{
+  background-image: url('/assets/icons/Twitter.png');
+}
+
+#social-linkedin{
+  background-image: url('/assets/icons/Linkedin.png');
+}
+
+#header-grid p{
+  padding-top: 10px;
+  opacity: .7;
+  color: white;
+}
+
+@media(max-width: 569px){
+  #header-grid{
+    grid-template-columns: 60px 60px 60px;
+  }
+  #header-grid p{
+    padding-top: 20px;
+    grid-column: 1 / -1;
+
+  }
+}

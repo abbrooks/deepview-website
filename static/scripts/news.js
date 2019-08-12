@@ -9,9 +9,11 @@ class Article{
     this.categories = document.createElement('ul');
     this.categories.className = 'article-categories';
     for(var x in obj.categories){
-      var newLi = document.createElement('li');
-      newLi.innerHTML = obj.categories[x];
-      this.categories.append(newLi);
+      if(x < 3){
+        var newLi = document.createElement('li');
+        newLi.innerHTML = obj.categories[x];
+        this.categories.append(newLi);
+      }
     }
     this.date = document.createElement('h2');
     var dateStr = obj.date;

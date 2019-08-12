@@ -1,7 +1,3 @@
-function contactUs(){
-  window.location='/contact';
-}
-
 function goImageGuard(){
   window.location = '/imageGuard';
 }
