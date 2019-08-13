@@ -36,7 +36,7 @@
   margin-top: 20px;
   border-radius: 25px;
   background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
-  height: 30px;
+  height: 40px;
 }
 
 #admin-creds{
@@ -69,4 +69,29 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+#category-grid{
+
+}
+
+#category-grid div{
+  background-image: linear-gradient(45deg, rgb(19, 84, 122) 0%, rgb(128, 208, 199) 100%);
+  height: 30px;
+  color: white;
+  border-radius: 15px;
+  padding-left: 10px;
+  display: inline-block;
+  padding-right: 10px;
+  margin-right: 15px;
+  margin-top: 8px;
+}
+
+#category-grid div p, #category-grid div i{
+  display: inline-block;
+  padding-top: 4px;
+}
+#category-grid div i{
+  cursor: pointer;
+  padding-left: 10px;
 }

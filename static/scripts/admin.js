@@ -1,3 +1,30 @@
+class CategoryCell{
+  constructor(cat){
+    this.container = document.createElement('div');
+    this.catP = document.createElement('p');
+    this.catP.innerHTML = cat;
+    this.catX = document.createElement('i');
+    this.catX.className = "far fa-times-circle";
+    this.catX.cat = cat;
+    this.catX.container = this.container;
+    this.container.append(this.catP);
+    this.container.append(this.catX);
+    this.AddEventListeners(this.catX);
+  }
+  AddEventListeners(obj){
+    obj.addEventListener('click',function(){
+      var grid = document.getElementById('category-grid');
+      var valueToRemove = obj.cat;
+      var filteredItems = cats.filter(function(item) {
+        return item !== valueToRemove
+      });
+      cats = filteredItems;
+      grid.removeChild(obj.container);
+      console.log('cats: '+cats);
+    });
+  }
+}
+
 console.log('Loaded admin script');
 cats=[]
 function addCat(){
@@ -8,6 +35,9 @@ function addCat(){
     return
   }
   cats.push(cat);
+  var catGrid = document.getElementById('category-grid');
+  var newCat = new CategoryCell(cat);
+  catGrid.append(newCat.container);
   document.getElementById('category').value=null;
   document.getElementById('category').innerHTML='';
   return
