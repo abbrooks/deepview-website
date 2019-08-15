@@ -1,12 +1,13 @@
 function clearFeatureForm(){
   var purpose = document.getElementById('feature-purpose');
+  var email = document.getElementById('feature-email');
   var po = document.getElementById('feature-po');
   var budget = document.getElementById('feature-budget');
   var desc = document.getElementById('feature-textarea');
   var public = document.getElementById('feature-public');
 
-
   purpose.value = "select a product...";
+  email.value = "";
   po.value = "";
   budget.value = "";
   desc.value = "";
@@ -17,18 +18,14 @@ function clearFeatureForm(){
 
 function submitFeatureForm(){
   var purpose = document.getElementById('feature-purpose').value;
+  var email = document.getElementById('feature-email').value;
   var po = document.getElementById('feature-po').value;
   var budget = document.getElementById('feature-budget').value;
   var desc = document.getElementById('feature-textarea').value;
   var pub = document.getElementById('feature-public').checked;
-  var email = 'email shit goes here'
-  
+
   if (purpose=='' || purpose == ' ' || purpose==null){
     alert('Sorry, you must provide a product.')
-    return
-  }
-  if (po=='' || po == ' ' || po==null){
-    alert('Sorry, you must proivde your purchase order number.')
     return
   }
   if (budget=='' || budget == ' ' || budget==null){

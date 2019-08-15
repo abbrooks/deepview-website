@@ -24,7 +24,7 @@
   border-radius: 40px;
   margin: 30px auto 0px auto;
   width: 500px;
-  height: 600px;
+  height: 660px;
   padding: 40px;
   color: black;
 }
@@ -43,6 +43,11 @@
 
 #modal-content-feature p{
   font-size: 22px;
+}
+
+#modal-content-feature p span{
+  font-size: 14px;
+  opacity: 0.6;
 }
 
 #modal-content-feature input, #modal-content-feature select{
