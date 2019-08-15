@@ -20,7 +20,7 @@ function submitFeatureForm(){
   var po = document.getElementById('feature-po').value;
   var budget = document.getElementById('feature-budget').value;
   var desc = document.getElementById('feature-textarea').value;
-  var public = document.getElementById('feature-public').checked;
+  var pub = document.getElementById('feature-public').checked;
 
   if (purpose=='' || purpose == ' ' || purpose==null){
     alert('Sorry, you must provide a product.')
@@ -38,10 +38,15 @@ function submitFeatureForm(){
     alert('Sorry, you must provide a feature description.')
     return
   }
-  console.log(purpose +" "+po +" "+budget +" "+desc +" "+public);
 
-  //body, firstName, lastName, purpose, email, phone
-  // $.post('/contactUs', {"body":message, 'purpose':purpose, 'phone':phone,'email':email, 'name':name}, res=>{
-  //   alert(res)
-  // })
+  console.log(purpose +" "+po +" "+budget +" "+desc +" "+pub);
+
+  $.post('/suggestions', {'purpose':purpose, 'feature':desc, 'budget':budget, 'isPub':pub, 'phone':phone}, res=>{
+    if (res){
+      alert(res)
+    }
+    else{
+      alert('Hmmm...it seems something went wrong on this end.')
+    }
+  });
 }
