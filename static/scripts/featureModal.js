@@ -21,7 +21,8 @@ function submitFeatureForm(){
   var budget = document.getElementById('feature-budget').value;
   var desc = document.getElementById('feature-textarea').value;
   var pub = document.getElementById('feature-public').checked;
-
+  var email = 'email shit goes here'
+  
   if (purpose=='' || purpose == ' ' || purpose==null){
     alert('Sorry, you must provide a product.')
     return
@@ -41,7 +42,7 @@ function submitFeatureForm(){
 
   console.log(purpose +" "+po +" "+budget +" "+desc +" "+pub);
 
-  $.post('/suggestions', {'purpose':purpose, 'feature':desc, 'budget':budget, 'isPub':pub, 'phone':phone}, res=>{
+  $.post('/suggestions', {'purpose':purpose, 'feature':desc, 'budget':budget, 'isPub':pub, 'phone':phone, 'email':email}, res=>{
     if (res){
       alert(res)
     }
