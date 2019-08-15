@@ -47,6 +47,56 @@ module.exports = router=>{
     }
   });
 
+  router.get('/suggestions', (req, res)=>{
+    if (!req.query){
+      console.log('No query sent in get suggestions')
+      res.status(401).end();
+    }
+    else{
+      var {product} = req.query;
+      if (!product){
+        console.log('No product sent.')
+        res.status(401).end();
+      }
+      database.connect(db=>{
+        db.db('suggestions').collection('suggestions').find({'product':product}, (err, suggs)=>{
+          if (err){
+            console.log('There was an error finding suggs for product: ' + product+ ' Error: ' + err);
+            res.status(500).end();
+            db.close();
+          }
+          else{
+            if (suggs){
+              if (suggs.length>0){
+                var suggestions = []
+                for (s in suggs){
+                  var sug = suggs[s];
+                  if (sug.isPub==true || sug.isPub=="true"){
+                    suggestions.push(sug)
+                  }
+                }
+                res.status(200).json({'success':true, 'data':suggestions}).end();
+                db.close();
+              }
+              else{
+                console.log('There are no suggestions for product: ' + product)
+                res.status(200).json({'success':false, 'data':[]}).end();
+                db.close();
+              }
+            }
+            else{
+              console.log('There are no suggestions for product: ' + product)
+              res.status(200).json({'success':false, 'data':[]}).end();
+              db.close();
+            }
+          }
+        })
+      }, dbErr=>{
+        console.log('There was an error connecting to mongo: ' + dbErr);
+        res.status(500).end();
+      })
+    }
+  })
   // standard nodeMailer stuff
   function sendEmail(body, subject1, cb){
     let transporter = nodeMailer.createTransport({
