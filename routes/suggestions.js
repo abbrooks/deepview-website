@@ -16,9 +16,9 @@ module.exports = router=>{
         res.status(401).end();
       }
       else{
-        sugg = {"product":product, "feature":feature, "phone":phone, 'email':email, "budget":budget, "isPub":isPub}
+        console.log('\n\n\nPorudct: ' + product)
         database.connect(db=>{
-          db.db('suggestions').collection('suggestions').insertOne(sugg, (err, res1)=>{
+          db.db('suggestions').collection('suggestions').insertOne({"product":product, "feature":feature, "phone":phone, 'email':email, "budget":budget, "isPub":isPub}, (err, res1)=>{
             if (err){
               console.log('There was an error inseerting suggestion.' + err)
               res.status(500).end();
@@ -59,7 +59,7 @@ module.exports = router=>{
         res.status(401).end();
       }
       database.connect(db=>{
-        db.db('suggestions').collection('suggestions').find({'product':product}, (err, suggs)=>{
+        db.db('suggestions').collection('suggestions').find({"product":product}).toArray((err, suggs)=>{
           if (err){
             console.log('There was an error finding suggs for product: ' + product+ ' Error: ' + err);
             res.status(500).end();
@@ -67,7 +67,10 @@ module.exports = router=>{
           }
           else{
             if (suggs){
+              console.log('\n')
+              console.log('Suggs:  ' + suggs)
               if (suggs.length>0){
+                console.log('THRE ARE SUGGS')
                 var suggestions = []
                 for (s in suggs){
                   var sug = suggs[s];

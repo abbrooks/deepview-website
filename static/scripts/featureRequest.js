@@ -18,6 +18,7 @@ function clearFeatureForm(){
 
 function viewFeatureRequests(product){
   $.get('/suggestions', {'product':product}, res=>{
+    console.log(res)
     if (res){
       if (res.success){
         console.log('Display suggestions: ' + JSON.stringify(res.data));
