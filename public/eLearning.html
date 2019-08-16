@@ -73,8 +73,8 @@
         </select>
         <p>Email <span>(optional)</span></p>
         <input id="feature-email" type="text" />
-        <p>PO Number <span>(optional)</span></p>
-        <input id="feature-po" type="text" />
+        <p>Phone Number <span>(optional)</span></p>
+        <input id="feature-phone" type="text" />
         <p>Budget</p>
         <input id="feature-budget" type="text" />
         <p>Feature Description</p>
@@ -125,7 +125,7 @@
       <p>We get rather a lot of requests, so to help us filter and ensure we are building the best product for the future, for our clients, we ask that you fill out a quick form. Your request will then fire straight through to our product team for review!</p>
       <div id="feature-req-grid">
         <button onclick="document.getElementById('modal-wrapper-feature').style.display = 'block';">REQUEST A FEATURE</button>
-        <button>VIEW FEATURE REQUESTS</button>
+        <button onclick="viewFeatureRequests('eLearning');">VIEW FEATURE REQUESTS</button>
       </div>
       <div id="feature-req-content"></div>
     </div>
@@ -138,5 +138,5 @@
   <script type="text/javascript" src="/scripts/eLearning.js"></script>
   <script type="text/javascript" src="/scripts/navbar.js"></script>
   <script type="text/javascript" src="/scripts/contactModal.js"></script>
-  <script type="text/javascript" src="/scripts/featureModal.js"></script>
+  <script type="text/javascript" src="/scripts/featureRequest.js"></script>
 </html>
