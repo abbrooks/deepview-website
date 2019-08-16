@@ -10,6 +10,7 @@
     <link type="text/css" rel="stylesheet" href="/css/header.css">
     <link type="text/css" rel="stylesheet" href="/css/footer.css">
     <link type="text/css" rel="stylesheet" href="/css/contact-modal.css">
+    <link type="text/css" rel="stylesheet" href="/css/feature-modal.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <title>DeepView ImageGuard™</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -58,6 +59,32 @@
         <button id="contact-submit-btn" onclick='submitContactForm()'>SUBMIT</button>
       </div>
     </div>
+    <div id="modal-wrapper-feature">
+      <div id="modal-content-feature" class="animate-modal-content">
+        <h2>Feature Request</h2>
+        <i class="far fa-times-circle" onclick="clearFeatureForm()"></i>
+        <p>Product</p>
+        <select id="feature-purpose">
+          <option>ImageGuard</option>
+          <option>CorpGuard</option>
+          <option>eLearning</option>
+          <option>ChatGuard</option>
+        </select>
+        <p>Email <span>(optional)</span></p>
+        <input id="feature-email" type="text" />
+        <p>PO Number <span>(optional)</span></p>
+        <input id="feature-po" type="text" />
+        <p>Budget</p>
+        <input id="feature-budget" type="text" />
+        <p>Feature Description</p>
+        <textarea id="feature-textarea"></textarea>
+        <div id="feature-grid">
+          <p>Make public to other DeepView clients</p>
+          <input id="feature-public" type="checkbox" />
+        </div>
+        <button id="feature-submit-btn" onclick='submitFeatureForm()'>SUBMIT</button>
+      </div>
+    </div>
     <div id="header-container">
       <div id="header">
         <!-- <video poster="/video/header.png" autoplay="autoplay" src="/video/header.mp4" -->
@@ -102,6 +129,8 @@
       <p>© Copyright 2019 - DeepView™ DeepView Solutions is a sister company of Social Media Compliance Ltd, a company registered in England and Wales with company number 9158438. Registered office: 44 Great Marlborough St, London, W1F 7JL.<p>
     </div>
   </body>
+  <script type="text/javascript" src="/scripts/imageGuard.js"></script>
   <script type="text/javascript" src="/scripts/navbar.js"></script>
   <script type="text/javascript" src="/scripts/contactModal.js"></script>
+  <script type="text/javascript" src="/scripts/featureModal.js"></script>
 </html>

@@ -24,6 +24,24 @@ function submitFeatureForm(){
   var desc = document.getElementById('feature-textarea').value;
   var pub = document.getElementById('feature-public').checked;
 
+  switch(purpose){
+    case 'ImageGuard':
+      purpose = 'imageGuard';
+      break;
+    case 'CorpGuard':
+      purpose = 'corpGuard';
+      break;
+    case 'eLearning':
+      purpose = 'eLearning';
+      break;
+    case 'ChatGuard':
+      purpose = 'chatGuard';
+      break;
+    default:
+      purpose = '';
+      break;
+  }
+
   if (purpose=='' || purpose == ' ' || purpose==null){
     alert('Sorry, you must provide a product.')
     return
@@ -36,6 +54,8 @@ function submitFeatureForm(){
     alert('Sorry, you must provide a feature description.')
     return
   }
+
+
 
   console.log(purpose +" "+po +" "+budget +" "+desc +" "+pub);
 
