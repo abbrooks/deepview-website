@@ -73,7 +73,7 @@ function submitFeatureForm(){
 
   console.log(purpose +" "+phone +" "+budget +" "+desc +" "+pub);
 
-  $.post('/suggestions', {'product':purpose, 'feature':desc, 'budget':budget, 'isPub':pub, 'phone':phone, 'email':email}, res=>{
+  $.post('/suggestion', {'product':purpose, 'feature':desc, 'budget':budget, 'isPub':pub, 'phone':phone, 'email':email}, res=>{
     if (res){
       alert(res)
     }

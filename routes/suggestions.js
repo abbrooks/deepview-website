@@ -10,8 +10,8 @@ module.exports = router=>{
       res.status(401).end();
     }
     else{
-      var {product, feature, poNumber, budget, isPub} = req.body;
-      if (!product || !feature || !poNumber || !budget || !isPub){
+      var {product, feature, phone, budget, isPub, email} = req.body;
+      if (!product || !feature || !phone || !budget || !isPub){
         console.log('Missing fields')
         res.status(401).end();
       }
