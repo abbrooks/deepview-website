@@ -98,7 +98,7 @@ router.get('/index', (_, res) => { res.render('index.html'); });
 require('./routes/navigation.js')(router, app) //for navigating through the site
 require('./routes/backend_news.js')(router, app) //for creating and getting news pieces
 require('./routes/contactUs.js')(router, app) //for sending emails from website to DeepView
-
+require('./routes/suggestions.js')(router, app) // for getting suggestions
 
 //uses our router:
 app.use('/', router);
