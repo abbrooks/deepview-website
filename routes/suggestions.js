@@ -128,4 +128,30 @@ module.exports = router=>{
       });
   }
 
+  router.post('/upVote', (req,res)=>{
+    if (!req.body){
+      console.log('No body sent.')
+      res.status(401).end();
+    }
+    else{
+      var {id} = req.body
+      database.connect(db=>{
+        db.db('suggestions').collection('suggestions').updateOne({'_id':database.objectId(id)}, {$inc:{'upVotes':1}}, (err, res1)=>{
+          if (err){
+            console.log('There was an error inc upvote for feature suggestions: ' + id+ " "+err);
+            res.status(500).end()
+            db.close()
+          }
+          else{
+            res.status(200).send('Upvoted')
+            db.close();
+          }
+        })
+      }, dbErr=>{
+        console.log('There was an error connecting to mongo: ' + dbErr);
+        res.status(500).end();
+      })
+    }
+  })
+
 } // end of module exports

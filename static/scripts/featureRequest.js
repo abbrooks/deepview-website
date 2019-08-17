@@ -3,10 +3,20 @@ class FeatureComment{
     this.grid = document.createElement('div');
     this.grid.className = 'feature-content-grid';
     this.colDiv = document.createElement('div');
-    this.newUp = document.createElement('i');
+    this.newUp = document.createElement('button');
     this.newUp.className = 'fas fa-arrow-up';
+    this.newUp.setAttribute('data-feature', feature._id)
+    this.newUp.addEventListener('click', function(){
+      console.log('Up arrow clicked');
+      console.log(this)
+      console.log(this.getAttribute('data-feature'))
+      $.post('/upVote', {'id':this.getAttribute('data-feature')}, res=>{
+        console.log(res)
+      })
+
+    });
     this.upCount = document.createElement('p');
-    this.upCount.innerHTML = '0';
+    this.upCount.innerHTML = 'UpVotes: '+feature.upVotes;
     this.newP = document.createElement('p');
     this.newP.className = 'feature-content-p';
     this.newP.innerHTML = feature.feature;
