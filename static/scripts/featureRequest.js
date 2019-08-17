@@ -16,7 +16,7 @@ class FeatureComment{
 
     });
     this.upCount = document.createElement('p');
-    if (feature.hasOwnProperty(upVotes)){
+    if (feature.hasOwnProperty('upVotes')){
       this.upCount.innerHTML = 'UpVotes: '+feature.upVotes;
     }
     else{
