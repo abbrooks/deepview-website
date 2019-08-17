@@ -3,7 +3,7 @@ class FeatureComment{
     this.grid = document.createElement('div');
     this.grid.className = 'feature-content-grid';
     this.colDiv = document.createElement('div');
-    this.newUp = document.createElement('button');
+    this.newUp = document.createElement('i');
     this.newUp.className = 'fas fa-arrow-up';
     this.newUp.setAttribute('data-feature', feature._id)
     this.newUp.addEventListener('click', function(){
@@ -17,10 +17,10 @@ class FeatureComment{
     });
     this.upCount = document.createElement('p');
     if (feature.hasOwnProperty('upVotes')){
-      this.upCount.innerHTML = 'UpVotes: '+feature.upVotes;
+      this.upCount.innerHTML =feature.upVotes;
     }
     else{
-      this.upCount.innerHTML = 'UpVotes: 0';
+      this.upCount.innerHTML = '0';
     }
 
     this.newP = document.createElement('p');

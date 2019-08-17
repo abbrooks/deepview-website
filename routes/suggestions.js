@@ -78,6 +78,7 @@ module.exports = router=>{
                     suggestions.push(sug)
                   }
                 }
+                suggestions = sortSuggestions(suggestions);
                 res.status(200).json({'success':true, 'data':suggestions}).end();
                 db.close();
               }
@@ -153,5 +154,18 @@ module.exports = router=>{
       })
     }
   })
+
+  function sortSuggestions(arr){
+    arr.sort(function(first, second) {
+      if (!first.hasOwnProperty('upVotes')){
+        first.upVotes=0
+      }
+      if (!second.hasOwnProperty('upVotes')){
+        second.upVotes=0
+      }
+      return second.upVotes-first.upVotes;
+    });
+    return arr;
+  }
 
 } // end of module exports
