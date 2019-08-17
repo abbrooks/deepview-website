@@ -16,7 +16,13 @@ class FeatureComment{
 
     });
     this.upCount = document.createElement('p');
-    this.upCount.innerHTML = 'UpVotes: '+feature.upVotes;
+    if (feature.hasOwnProperty(upVotes)){
+      this.upCount.innerHTML = 'UpVotes: '+feature.upVotes;
+    }
+    else{
+      this.upCount.innerHTML = 'UpVotes: 0';
+    }
+
     this.newP = document.createElement('p');
     this.newP.className = 'feature-content-p';
     this.newP.innerHTML = feature.feature;
