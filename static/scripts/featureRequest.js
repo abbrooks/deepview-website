@@ -1,3 +1,22 @@
+class FeatureComment{
+  constructor(feature){
+    this.grid = document.createElement('div');
+    this.grid.className = 'feature-content-grid';
+    this.colDiv = document.createElement('div');
+    this.newUp = document.createElement('i');
+    this.newUp.className = 'fas fa-arrow-up';
+    this.upCount = document.createElement('p');
+    this.upCount.innerHTML = '0';
+    this.newP = document.createElement('p');
+    this.newP.className = 'feature-content-p';
+    this.newP.innerHTML = feature.feature;
+    this.colDiv.append(this.newUp);
+    this.colDiv.append(this.upCount);
+    this.grid.append(this.colDiv);
+    this.grid.append(this.newP);
+  }
+}
+
 function clearFeatureForm(){
   var purpose = document.getElementById('feature-purpose');
   var email = document.getElementById('feature-email');
@@ -22,6 +41,16 @@ function viewFeatureRequests(product){
     if (res){
       if (res.success){
         console.log('Display suggestions: ' + JSON.stringify(res.data));
+        var featureDiv = document.getElementById('feature-req-content');
+        for(var x in res.data){
+          var newGrid = new FeatureComment(res.data[x]).grid;
+          featureDiv.append(newGrid);
+        }
+        var viewBtn = document.getElementById('feature-viewBtn');
+        viewBtn.style.filter = 'grayscale(100%)';
+
+        viewBtn.disabled = 'true';
+
       }
       else{
         console.log('No suggestions')
@@ -76,7 +105,8 @@ function submitFeatureForm(){
 
   $.post('/suggestion', {'product':purpose, 'feature':desc, 'budget':budget, 'isPub':pub, 'phone':phone, 'email':email}, res=>{
     if (res){
-      alert(res)
+      alert(res);
+      document.getElementById('modal-wrapper-feature').style.display = 'none';
     }
     else{
       alert('Hmmm...it seems something went wrong on this end.')
